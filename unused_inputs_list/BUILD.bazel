@@ -1,0 +1,15 @@
+load("//:defs.bzl", "foo")
+
+foo(
+    name = "foo",
+    srcs = [
+        "bar.txt",
+        "baz.txt",
+        "quux.txt",
+    ],
+)
+
+sh_binary(
+    name = "cat",
+    srcs = ["cat.sh"],
+)
